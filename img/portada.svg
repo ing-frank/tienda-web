@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480" role="img" aria-label="Perchero con ropa y bolsa de compras de Nuevo Mundo">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12a4a6"/>
+      <stop offset="1" stop-color="#0b7275"/>
+    </linearGradient>
+    <linearGradient id="sol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#ff9a6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="480" rx="28" fill="url(#fondo)"/>
+  <circle cx="470" cy="110" r="70" fill="url(#sol)" opacity="0.9"/>
+  <path d="M0 400 Q150 360 300 395 T600 380 V480 H0 Z" fill="#0a5e60" opacity="0.6"/>
+  <!-- hojas de palma -->
+  <g fill="#0a5e60" opacity="0.55">
+    <path d="M40 60 q60 10 90 60 q-55 -20 -90 -60z"/>
+    <path d="M30 90 q70 0 100 40 q-60 -5 -100 -40z"/>
+    <path d="M60 40 q40 30 70 80 q-50 -35 -70 -80z"/>
+  </g>
+  <!-- perchero -->
+  <rect x="110" y="110" width="320" height="10" rx="5" fill="#fff6ec"/>
+  <rect x="122" y="115" width="8" height="300" fill="#fff6ec"/>
+  <rect x="410" y="115" width="8" height="300" fill="#fff6ec"/>
+  <rect x="96" y="408" width="60" height="10" rx="5" fill="#fff6ec"/>
+  <rect x="384" y="408" width="60" height="10" rx="5" fill="#fff6ec"/>
+  <!-- ganchos -->
+  <g stroke="#fff6ec" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M195 115 q0 -14 10 -14"/>
+    <path d="M285 115 q0 -14 10 -14"/>
+    <path d="M370 115 q0 -14 10 -14"/>
+  </g>
+  <!-- camisa -->
+  <path d="M155 135 L195 125 L235 135 L255 175 L235 185 L230 170 L230 300 L160 300 L160 170 L155 185 L135 175 Z" fill="#fff6ec"/>
+  <path d="M182 128 L195 150 L208 128" fill="none" stroke="#12a4a6" stroke-width="4"/>
+  <line x1="195" y1="150" x2="195" y2="295" stroke="#12a4a6" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <!-- vestido -->
+  <path d="M270 128 L320 128 L315 175 L350 330 L240 330 L275 175 Z" fill="#ff6b5b"/>
+  <path d="M275 175 L315 175" stroke="#e04f40" stroke-width="6"/>
+  <g fill="#ffd27a" opacity="0.9">
+    <circle cx="285" cy="230" r="6"/><circle cx="310" cy="260" r="6"/><circle cx="270" cy="290" r="6"/><circle cx="325" cy="305" r="6"/><circle cx="300" cy="205" r="5"/>
+  </g>
+  <!-- sombrero -->
+  <ellipse cx="378" cy="168" rx="52" ry="14" fill="#f2c98b"/>
+  <path d="M352 166 q26 -50 52 0 z" fill="#f2c98b"/>
+  <rect x="352" y="156" width="52" height="9" fill="#ff6b5b"/>
+  <!-- bolsa de compras -->
+  <g transform="translate(440 270)">
+    <path d="M25 30 q0 -32 35 -32 q35 0 35 32" fill="none" stroke="#fff6ec" stroke-width="7" stroke-linecap="round"/>
+    <rect x="0" y="28" width="120" height="130" rx="10" fill="#fff6ec"/>
+    <text x="60" y="88" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#0b7275">Nuevo</text>
+    <text x="60" y="114" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#ff6b5b">Mundo</text>
+  </g>
+  <!-- sandalias -->
+  <g transform="translate(180 360)">
+    <ellipse cx="0" cy="20" rx="34" ry="12" fill="#ffd27a"/>
+    <ellipse cx="78" cy="20" rx="34" ry="12" fill="#ffd27a"/>
+    <path d="M-18 18 q18 -22 36 0" fill="none" stroke="#ff6b5b" stroke-width="6"/>
+    <path d="M60 18 q18 -22 36 0" fill="none" stroke="#ff6b5b" stroke-width="6"/>
+  </g>
+</svg>

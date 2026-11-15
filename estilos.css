@@ -1,0 +1,422 @@
+/* =========================================================
+   Nuevo Mundo - Hoja de estilos externa
+   Programación de Aplicaciones Web I - UFHEC
+   ========================================================= */
+
+/* ---------- Variables de color ---------- */
+:root {
+    --coral: #ff6b5b;
+    --coral-oscuro: #e04f40;
+    --turquesa: #12a4a6;
+    --turquesa-oscuro: #0b7275;
+    --arena: #fff6ec;
+    --crema: #fffaf4;
+    --texto: #2d2a32;
+    --texto-suave: #6b6570;
+    --blanco: #ffffff;
+    --sombra: 0 10px 30px rgba(45, 42, 50, 0.10);
+    --radio: 16px;
+}
+
+/* ---------- Estilos generales ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto);
+    background-color: var(--crema);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--turquesa-oscuro);
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------- 1. Encabezado ---------- */
+/* Hecho por: Frank Alberto Sherivé (LR-2025-03023) */
+.encabezado {
+    background-color: var(--blanco);
+    box-shadow: 0 2px 12px rgba(45, 42, 50, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.encabezado-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--turquesa-oscuro);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: var(--coral);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+    background-color: var(--turquesa);
+    color: var(--blanco);
+}
+
+/* ---------- 2. Portada ---------- */
+/* Hecho por: Frank Alberto Sherivé (LR-2025-03023) */
+.portada {
+    background: linear-gradient(135deg, #e6f7f6 0%, var(--arena) 55%, #ffe6e0 100%);
+    padding: 70px 0;
+}
+
+.portada-contenido {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--coral);
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+}
+
+.portada h1 {
+    font-size: 3.4rem;
+    color: var(--turquesa-oscuro);
+}
+
+.eslogan {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--coral-oscuro);
+    margin: 6px 0 16px;
+}
+
+.portada-texto p {
+    color: var(--texto-suave);
+    max-width: 480px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 14px 30px;
+    background-color: var(--coral);
+    color: var(--blanco);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(255, 107, 91, 0.35);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.boton:hover {
+    background-color: var(--coral-oscuro);
+    transform: translateY(-2px);
+}
+
+.portada-imagen img {
+    border-radius: 24px;
+    box-shadow: var(--sombra);
+}
+
+/* ---------- Secciones generales ---------- */
+.seccion {
+    padding: 70px 0;
+}
+
+.seccion-clara {
+    background-color: var(--blanco);
+}
+
+.seccion h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--turquesa-oscuro);
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--texto-suave);
+    margin: 8px 0 40px;
+}
+
+/* ---------- 3. Categorías (ul) ---------- */
+/* Hecho por: Ismael Mercedes Castillo (LR-2024-01537) */
+.categorias {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.categorias li {
+    background-color: var(--blanco);
+    border-radius: var(--radio);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    border-top: 5px solid var(--turquesa);
+    transition: transform 0.2s;
+}
+
+.categorias li:nth-child(even) {
+    border-top-color: var(--coral);
+}
+
+.categorias li:hover {
+    transform: translateY(-6px);
+}
+
+.icono {
+    font-size: 2.6rem;
+}
+
+.categorias h3 {
+    margin: 10px 0 6px;
+}
+
+.categorias p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ---------- 4. Tabla de productos ---------- */
+/* Hecho por: Brainerd David Schals Frías (LR-2025-02699) */
+.tabla-envoltura {
+    overflow-x: auto;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+}
+
+.tabla-productos caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 700;
+    padding: 16px 20px;
+    background-color: var(--arena);
+    color: var(--coral-oscuro);
+}
+
+.tabla-productos th {
+    background-color: var(--turquesa);
+    color: var(--blanco);
+    text-align: left;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.tabla-productos td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #f0e8de;
+    vertical-align: top;
+}
+
+.tabla-productos td:first-child {
+    font-weight: 700;
+}
+
+.tabla-productos tbody tr:nth-child(even) {
+    background-color: var(--crema);
+}
+
+.tabla-productos tbody tr:hover {
+    background-color: #e6f7f6;
+}
+
+.precio {
+    font-weight: 800;
+    color: var(--coral-oscuro);
+    white-space: nowrap;
+}
+
+/* ---------- 5. Promociones e información ---------- */
+/* Hecho por: Isaías Marchart Sosa (LR-2024-01093) */
+.promos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.promo {
+    background-color: var(--blanco);
+    border-radius: var(--radio);
+    padding: 30px 24px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.promo-destacada {
+    background: linear-gradient(135deg, var(--coral), #ff9a6b);
+    color: var(--blanco);
+}
+
+.promo-numero {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--coral);
+}
+
+.promo-destacada .promo-numero {
+    color: var(--blanco);
+}
+
+.promo h3 {
+    margin: 4px 0 10px;
+}
+
+.info {
+    margin-top: 40px;
+    background-color: var(--arena);
+    border-left: 6px solid var(--turquesa);
+    border-radius: var(--radio);
+    padding: 28px 30px;
+}
+
+.info h3 {
+    color: var(--turquesa-oscuro);
+    margin-bottom: 10px;
+}
+
+.info p + p {
+    margin-top: 8px;
+}
+
+/* ---------- 6. Pie de página ---------- */
+/* Hecho por: Isaías Marchart Sosa (LR-2024-01093) */
+.pie {
+    background-color: var(--texto);
+    color: #e9e4ee;
+    padding-top: 50px;
+}
+
+.pie-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 30px;
+}
+
+.pie h4 {
+    color: var(--blanco);
+    margin-bottom: 12px;
+}
+
+.pie p {
+    margin-bottom: 6px;
+}
+
+.pie a {
+    color: #7fdcdd;
+}
+
+.redes {
+    list-style: none;
+}
+
+.redes li {
+    margin-bottom: 6px;
+}
+
+.copy {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #b8b0bf;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 40px;
+    padding: 18px 5%;
+}
+
+/* ---------- Diseño adaptable (celulares y tablets) ---------- */
+@media (max-width: 860px) {
+    .portada-contenido,
+    .pie-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .categorias,
+    .promos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portada h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .categorias,
+    .promos {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-contenido {
+        justify-content: center;
+    }
+
+    .seccion h2 {
+        font-size: 1.8rem;
+    }
+}

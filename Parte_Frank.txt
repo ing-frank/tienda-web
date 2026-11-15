@@ -1,0 +1,33 @@
+PROYECTO NUEVO MUNDO · GITHUB
+Parte de: Frank Alberto Sherivé (LR-2025-03023) · Turno 0 (eres el primero)
+Tu parte: estructura base, encabezado, portada con imagen principal y estilos (CSS).
+
+1. CREAR EL REPOSITORIO
+   - En github.com toca "+" > "New repository".
+   - Nombre: nuevo-mundo · Public · NO marques "Add a README" · Create repository.
+
+2. TU COMMIT (sube la base)
+   - Descomprime nuevo-mundo.zip en tu PC.
+   - En la página del repositorio vacío toca "uploading an existing file".
+   - Arrastra el CONTENIDO de la carpeta nuevo-mundo (index.html, estilos.css, README.md y la carpeta img).
+   - Mensaje del commit:  Estructura base, encabezado, portada y estilos (Frank)
+   - Commit changes.
+
+3. AGREGAR A LOS COMPAÑEROS
+   - Settings > Collaborators > Add people > escribe el usuario de GitHub de cada uno:
+     Ismael Mercedes Castillo · Brainerd David Schals Frías · Isaías Marchart Sosa
+   - Cada uno debe aceptar la invitación.
+
+4. MANDAR A CADA UNO SU ARCHIVO
+   - Parte_Ismael.txt   -> Ismael   (turno 1: categorías)
+   - Parte_Brainerd.txt -> Brainerd (turno 2: tabla de productos)
+   - Parte_Isaias.txt   -> Isaías   (turno 3: promociones y pie de página)
+   Que lo hagan EN ORDEN, uno termina y avisa, y sigue el otro.
+
+5. COMPROBAR
+   - Pestaña "Commits": deben verse 4 commits, cada uno con el nombre de su integrante.
+   - En index.html ya no debe quedar ninguna línea "PARTE DE".
+   - Opcional: Settings > Pages > Branch: main > Save, para tener la página publicada con un enlace.
+
+IMPORTANTE: cada uno debe hacer su commit desde SU cuenta. Si tú lo haces por ellos,
+el commit sale con tu nombre y no cuenta como de ellos.

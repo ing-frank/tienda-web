@@ -1,31 +1,8 @@
-PROYECTO NUEVO MUNDO · GITHUB
-Parte de: Isaías Marchart Sosa (LR-2024-01093)
-Turno: 3.º (espera a que el compañero anterior termine su commit, para que no choquen los cambios)
-
-ANTES DE EMPEZAR
-- Necesitas una cuenta de GitHub. Pásale tu usuario a Frank para que te agregue como colaborador.
-- Acepta la invitación que te llega al correo (o en github.com/notifications).
-
-PASOS (desde el navegador, no hay que instalar nada)
-1. Entra al repositorio nuevo-mundo y abre el archivo index.html.
-2. Toca el lápiz (Edit this file).
-3. Busca esta línea (en el editor usa Ctrl+F y escribe: PARTE DE):
-      <!-- PARTE DE ISAÍAS MARCHART SOSA: borra esta línea y pega aquí la sección de Promociones -->
-   Selecciónala completa, bórrala y en su lugar pega el código de "PROMOCIONES" que está abajo.
-4. Busca esta línea (en el editor usa Ctrl+F y escribe: PARTE DE):
-      <!-- PARTE DE ISAÍAS MARCHART SOSA: borra esta línea y pega aquí el Pie de página -->
-   Selecciónala completa, bórrala y en su lugar pega el código de "PIE DE PÁGINA" que está abajo.
-5. Toca "Commit changes...". En el mensaje escribe:
-      Agrega promociones y pie de página (Isaías)
-   Deja marcado "Commit directly to the main branch" y confirma.
-6. Listo. En la pestaña Commits debe aparecer tu nombre con ese cambio. Avísale al grupo.
-
-========== CÓDIGO: PROMOCIONES (copia desde la línea de abajo) ==========
-        <!-- ===== 5. PROMOCIONES E INFORMACIÓN · Hecho por: Isaías Marchart Sosa (LR-2024-01093) ===== -->
+w (LR-2024-01093) ===== -->
         <section id="promociones" class="seccion">
             <div class="contenedor">
-                <h2>Promociones especiales</h2>
-                <p class="subtitulo">Ofertas válidas hasta el 31 de diciembre de 2026.</p>
+                <h2>Promsociones especiales</h2>
+                <p class="subtitulo"wálidas hasta el 31 de diciembre de 2026.</p>
                 <div class="promos">
                     <article class="promo promo-destacada">
                         <p class="promo-numero">2x1</p>

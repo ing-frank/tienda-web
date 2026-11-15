@@ -95,3 +95,168 @@
                 </div>
             </div>
         </section>
+<!-- =====  METODO DE FACTURA · Hecho por: Javes Castillo Ortiz (LR-2025-03138) ===== -->
+        <!-- ===== FACTURACIÓN ===== -->
+<section id="factura" class="seccion seccion-clara">
+    <div class="contenedor">
+        <h2>Generar factura</h2>
+        <p class="subtitulo">Prepara e imprime la factura de tu compra.</p>
+
+        <div class="factura-panel">
+            <h3>Datos del cliente</h3>
+
+            <label for="cliente">Nombre del cliente:</label>
+            <input type="text" id="cliente" placeholder="Nombre del cliente">
+
+            <label for="producto">Seleccionar producto:</label>
+            <select id="producto">
+                <option value="Vestido Malecón" data-precio="1850">Vestido Malecón - RD$ 1,850</option>
+                <option value="Camisa Guayabera Clásica" data-precio="1450">Camisa Guayabera Clásica - RD$ 1,450</option>
+                <option value="Pantalón Cargo Urbano" data-precio="1600">Pantalón Cargo Urbano - RD$ 1,600</option>
+                <option value="Sandalias Arena" data-precio="990">Sandalias Arena - RD$ 990</option>
+                <option value="Bolso Tejido Bávaro" data-precio="1250">Bolso Tejido Bávaro - RD$ 1,250</option>
+                <option value="Gafas de Sol Coral" data-precio="750">Gafas de Sol Coral - RD$ 750</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" min="1" value="1">
+
+            <button type="button" class="boton" onclick="agregarProducto()">
+                Agregar producto
+            </button>
+
+            <div id="documento-factura">
+                <h3>Nuevo <span>Mundo</span></h3>
+                <p>Factura de compra</p>
+                <p>Fecha: <span id="fecha"></span></p>
+                <p>Cliente: <span id="nombre-cliente">No especificado</span></p>
+
+                <div class="tabla-envoltura">
+                    <table class="tabla-productos">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                                <th class="no-imprimir">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="detalle-factura">
+                            <tr>
+                                <td colspan="5">No hay productos agregados.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="total-factura">
+                    Total: <span id="total">RD$ 0.00</span>
+                </h3>
+
+                <p>¡Gracias por comprar en Nuevo Mundo!</p>
+            </div>
+
+            <button type="button" class="boton" onclick="imprimirFactura()">
+                Imprimir factura
+            </button>
+        </div>
+    </div>
+</section>
+<script>
+    const productosFactura = [];
+
+    function formatoRD(valor) {
+        return "RD$ " + valor.toLocaleString("es-DO", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
+
+    function agregarProducto() {
+        const selector = document.getElementById("producto");
+        const opcion = selector.options[selector.selectedIndex];
+        const cantidad = Number(document.getElementById("cantidad").value);
+
+        if (!Number.isInteger(cantidad) || cantidad < 1) {
+            alert("Introduce una cantidad válida.");
+            return;
+        }
+
+        productosFactura.push({
+            nombre: opcion.value,
+            precio: Number(opcion.dataset.precio),
+            cantidad: cantidad
+        });
+
+        actualizarFactura();
+    }
+
+    function actualizarFactura() {
+        const detalle = document.getElementById("detalle-factura");
+        const cliente = document.getElementById("cliente").value;
+        let total = 0;
+
+        document.getElementById("nombre-cliente").textContent =
+            cliente || "No especificado";
+
+        detalle.innerHTML = "";
+
+        productosFactura.forEach((producto, indice) => {
+            const subtotal = producto.precio * producto.cantidad;
+            total += subtotal;
+
+            detalle.innerHTML += `
+                <tr>
+                    <td>${producto.nombre}</td>
+                    <td>${formatoRD(producto.precio)}</td>
+                    <td>${producto.cantidad}</td>
+                    <td>${formatoRD(subtotal)}</td>
+                    <td class="no-imprimir">
+                        <button type="button" onclick="quitarProducto(${indice})">
+                            Quitar
+                        </button>
+                    </td>
+                </tr>
+            `;
+        });
+
+        if (productosFactura.length === 0) {
+            detalle.innerHTML = `
+                <tr>
+                    <td colspan="5">No hay productos agregados.</td>
+                </tr>
+            `;
+        }
+
+        document.getElementById("total").textContent = formatoRD(total);
+    }
+
+    function quitarProducto(indice) {
+        productosFactura.splice(indice, 1);
+        actualizarFactura();
+    }
+
+    function imprimirFactura() {
+        if (productosFactura.length === 0) {
+            alert("Agrega al menos un producto.");
+            return;
+        }
+
+        if (!document.getElementById("cliente").value.trim()) {
+            alert("Escribe el nombre del cliente.");
+            return;
+        }
+
+        window.print();
+    }
+
+    document.getElementById("cliente").addEventListener("input", actualizarFactura);
+
+    document.getElementById("fecha").textContent =
+        new Date().toLocaleDateString("es-DO");
+</script>
+
+</main>
+</body>
+</html>

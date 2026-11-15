@@ -39,5 +39,6 @@ Abrir `index.html` en el navegador.
 | Ismael Mercedes Castillo | LR-2024-01537 | Categorías (lista no ordenada) |
 | Brainerd David Schals Frías | LR-2025-02699 | Tabla de productos |
 | Isaías Marchart Sosa | LR-2024-01093 | Promociones, información y pie de página |
+  Javes Castillo Ortiz   LR-2025-03138
 
 Cada integrante subió su parte con su propio commit; se puede ver en el historial del repositorio (pestaña **Commits**).

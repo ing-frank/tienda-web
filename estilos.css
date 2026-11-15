@@ -420,3 +420,94 @@ h1, h2, h3, h4 {
         font-size: 1.8rem;
     }
 }
+/* ===== FACTURACIÓN ===== */
+
+.factura-panel {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.factura-panel label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+.factura-panel input,
+.factura-panel select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.factura-panel button {
+    margin-top: 15px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.factura-panel button:hover {
+    opacity: 0.85;
+}
+
+#documento-factura {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#documento-factura h3 {
+    margin-bottom: 10px;
+}
+
+#documento-factura h3 span {
+    color: #b8860b;
+}
+
+.total-factura {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Formato de impresión */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #documento-factura,
+    #documento-factura * {
+        visibility: visible;
+    }
+
+    #documento-factura {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .no-imprimir {
+        display: none !important;
+    }
+
+    @page {
+        margin: 15mm;
+    }
+}
